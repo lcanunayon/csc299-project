@@ -1,0 +1,1 @@
+make a simple command-line interface (CLI) based task manager written in Python. It allows users to add tasks and list existing tasks, with all tasks stored in a JSON file. Features Add a new task with a title and description List all existing tasks Tasks are saved in a JSON file, which is created if it does not already exist
