@@ -141,3 +141,9 @@ def main():
             break
         else:
             print("❌ Invalid choice. Try again.")
+
+def main():
+    print("✅ Task Manager started!")
+
+if __name__ == "__main__":
+    main()
