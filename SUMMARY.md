@@ -1,94 +1,189 @@
-SUMMARY.md
-Development Process Summary
+SUMMARY.md Development Process Summary.  
 
-This project was developed through an iterative, test-driven, AI-assisted workflow that combined multiple modes of coding assistance: direct ChatGPT conversations, GitHub Copilot completions, and continuous test feedback. Over the course of implementing the task manager CLI and supporting modules, the development process moved through planning, structured coding, debugging, CI automation, and refinement.
+  
 
-Initial Planning and Specification
+The project was created with a test-driven, iterative, and AI-assisted workflow involving several ways of assisting with the coding, including direct ChatGPT dialogues, GitHub Copilot completions, and continuous test feedback. Throughout the implementation of the task manager CLI and the supporting modules, the development process was carried out in terms of planning, structured coding, debugging, CI automation and refinement.  
 
-I began by clarifying the project goals: design a task manager system with models, storage, CLI commands, and full test coverage across multiple assignment phases (tasks3, tasks4, tasks5). I used ChatGPT in “planning/explaining” mode to break the project into clear components: data models, storage interface, task manager logic, and CLI UX. ChatGPT helped me restate specifications in my own words, list expected module responsibilities, and identify where tests would expect certain method signatures or behaviors.
+  
 
-AI Coding Assistance
+Preliminary Planning and Specification.  
 
-I used two main forms of AI assistance:
+  
 
-1. ChatGPT (conversational mode)
+I started by explaining the project requirements: a task manager system: design, models, storage, CLI commands, complete test coverage (tasks1, tasks2, tasks3, tasks4, tasks5). I applied ChatGPT in the practice of planning/explaining mode to divide the project into distinct parts: data models, storage interface, task manager logic, features, and CLI UX. ChatGPT was useful in paraphrasing specifications in my language, making anticipated module duties, and where tests would anticipate particular methods or behaviors. 
 
-I relied heavily on ChatGPT for:
+  
 
-breaking apart assignment PDFs into actionable steps
+AI Coding Assistance  
 
-explaining failing tests
+  
 
-designing architecture (store layer, CLI flow, model classes)
+I have applied two primary types of AI assistance:  
 
-debugging complex errors (e.g., ModuleNotFoundError, path issues, packaging layouts)
+  
 
-generating CI workflow files
+ChatGPT (conversational mode)  
 
-reviewing commits and suggesting next steps
+  
 
-This mode was extremely valuable for problem-solving and interpreting errors.
+I used ChatGPT to a large extent to:  
 
-2. GitHub Copilot (inline + chat side panel)
+  
 
-I used Copilot mainly for:
+Divide assignment PDFs into steps to be taken.  
 
-generating boilerplate functions
+  
 
-autofilling repetitive data-class code
+explaining failing tests  
 
-writing argparse boilerplate for the CLI
+  
 
-completing test-driven implementations based on docstrings
+store layer, CLI flow, model classes design work  
 
-inserting JSON store helpers
+  
 
-suggesting small refactors
+tracing down complicated bugs (e.g., ModuleNotFoundError, path problems, packaging layouts)  
 
-Copilot was good at speeding up small tasks but unreliable for understanding the “bigger picture.” It sometimes generated incorrect logic or functions that didn't match test expectations. ChatGPT was far better for conceptual guidance.
+  
 
-Testing and Debugging
+runing CI workflow files  
 
-I ran tests continuously using pytest -q in PowerShell. Early on, I hit issues where tests in tasks3 and tasks5 failed due to missing modules or incorrect directory structures. ChatGPT helped diagnose the missing __init__.py files, editable installs (pip install -e .), and PYTHONPATH issues. As the codebase grew, tests exposed logic mistakes in add/update/remove task logic, JSON serialization, and CLI command behavior.
+  
 
-Testing became the driving force behind most design decisions—especially for edge cases like nonexistent task IDs, empty stores, or CLI argument formatting.
+checking and recommending the further steps.  
 
-CI and Project Packaging
+  
 
-Toward the end, I added:
+This mode was very important in problem solving and errors interpretation.  
 
-a GitHub Actions CI workflow (test + install)
+  
 
-a proper packaging layout (src/taskmgr)
+GitHub Copilot (chat side panel + inline)  
 
-a tested entry point for the CLI
+  
 
-ChatGPT generated the initial workflow YAML, which I then adjusted manually.
+I used Copilot mainly for:  
 
-What Worked
+  
 
-Using ChatGPT as a planning and debugging partner
+producing boilerplate functions  
 
-Test-driven development exposing problems early
+  
 
-Copilot for accelerating boilerplate and repetitive code
+autofilling data-class repetition code.  
 
-Breaking work into branches (e.g., 001-task-manager)
+  
 
-Using editable installs to fix module import issues
+writing boiler-plate of argparse to the CLI.  
 
-What Didn’t Work / False Starts
+  
 
-Running pytest before setting up packaging (caused early confusion)
+implementing test-driven implementations using docstrings.  
 
-Trying to “fix” tasks3 tests even though only tasks5 mattered
+  
 
-Copilot generating wrong method signatures that did not match specs
+adding JSON files to store data.  
 
-Multiple Git conflicts when pushing before pulling
+  
 
-Misconfigured CI at first due to wrong working directory
+suggesting small refactors  
 
-Final Reflection
+  
 
-My development process ended up being a mix of human reasoning, AI-assisted planning, AI-assisted code generation, and strict adherence to automated tests. The strongest combination was ChatGPT for high-level reasoning + Copilot for local code suggestions + continuous pytest feedback. This created a disciplined, iterative development cycle that improved both code quality and my understanding of full-stack Python project structure.
+Copilot excelled in accelerating the small things but sometimes failed to provide a clear picture of the larger picture. It occasionally produced faulty rationale or programmes that were not in line with testing expectations. ChatGPT was much more useful in conceptual advice.  
+
+  
+
+Testing and Debugging  
+
+  
+
+I kept on testing through pytest -q in PowerShell. At the beginning, I encountered problems with tests in tasks3 and tasks5 failing because of missing modules or inappropriate directory hierarchy. ChatGPT assisted in diagnosing the missing init.py files, editable installs (pip install -e .) and PYTHONPATH problems. With the increase in the codebase, tests revealed logic errors in add/update/remove task logic, JSON serialization, and CLI command behavior.  
+
+  
+
+Testing became the motivation toward most design choices, particularly in edge cases such as nonexistent task IDs, empty stores, or CLI argument format.  
+
+  
+
+CI and Project Packaging  
+
+  
+
+Toward the end, I added:  
+
+  
+
+a GitHub Actions Ci workflow (install + test)  
+
+  
+
+an adequate layout of the packaging (src/taskmgr)  
+
+  
+
+a tried entry point of the CLI.  
+
+  
+
+ChatGPT has created the original workflow, which I have modified.  
+
+  
+
+What Worked  
+
+  
+
+ChatGPT as an assistant in planning and debugging.  
+
+  
+
+Early problem exposures through test-driven development.  
+
+  
+
+Copilot to accelerate boilerplate and repetitive code.  
+
+  
+
+Subdivision of work (i.e., 001-task-manager).  
+
+  
+
+Fixing module import problems with editable installs.  
+
+  
+
+What Didn't Work / False Starts  
+
+  
+
+Executing pytest prior to configuration of the packaging (resulted in premature confusion)  
+
+  
+
+Attempts to correct tasks3 tests despite tasks5 being the only important ones.  
+
+  
+
+Copilot producing incorrect method signatures that were not spec compliant.  
+
+  
+
+There were several Git conflicts of pushing before pulling.  
+
+  
+
+Improperly configured CI initially because of improper working directory.  
+
+  
+
+Final Reflection  
+
+  
+
+The process of my development turned out to be a combination of human logic, planning with AI assistance, code generation with AI assistance, and following automated tests to the letter. ChatGPT, used with Copilot, and continuous pytest feedback, which was used the most at the final stage of development. This formed a rigorous, iterative development process that enhanced the quality of code and my knowledge of full-stack Pythons project structure.  
+
+ 
+
+ 
