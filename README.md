@@ -29,3 +29,5 @@ A simple **command-line task manager** written in Python that lets you add, list
    ```bash
    git clone https://github.com/yourusername/task-manager-cli.git
    cd task-manager-cli
+
+all the prompts are in the bottom of the readmes in tasks
