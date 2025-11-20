@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: taskmgr
+Version: 0.1.0
+Summary: Simple Task Manager CLI (scaffold)
+Author: spec-bot
+Requires-Python: >=3.8

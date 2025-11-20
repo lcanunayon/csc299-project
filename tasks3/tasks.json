@@ -8,5 +8,15 @@
     "completed": false,
     "created": "2025-11-15T20:32:08.720303",
     "subtasks": []
+  },
+  {
+    "id": 2,
+    "description": "finished tests",
+    "priority": "medium",
+    "due_date": null,
+    "assigned_to": null,
+    "completed": false,
+    "created": "2025-11-15T20:33:38.123177",
+    "subtasks": []
   }
 ]

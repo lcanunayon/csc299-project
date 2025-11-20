@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "taskmgr"
+version = "0.1.0"
+description = "Simple Task Manager CLI (scaffold)"
+authors = ["spec-bot <spec@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+openai = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[tool.black]
+line-length = 88

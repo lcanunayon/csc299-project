@@ -213,3 +213,47 @@ tests/test_tasks.py::TestTaskManager::test_persistence PASSED
 Tasks are stored in `tasks.json` in the working directory. The file is created automatically when you add your first task.
 
 **Note:** Add `tasks.json` to `.gitignore` to avoid committing personal task data.
+
+-
+install uv
+from your csc299-project directory, run uv init tasks3 --vcs none --package tasks3 to create a new tasks3 directory and initialize it is a Python package
+add pytest by running uv add --dev pytest inside the tasks3 directory
+add this Python code to the top of tasks3/src/__init__.py
+def inc(n: int) -> int:
+    return n + 1
+create a file tests/test_inc.py with this Python code:
+from tasks3 import inc
+
+def test_inc():
+    assert inc(5) == 6
+run uv run pytest to verify that your test setup is working correctly (it should say "1 passed")
+now incorporate some (at least 2) tests (using the pytest framework) into your PKMS/task software
+call your code from the main method in tasks3/src/__init__.py
+then your code can be started using uv run tasks3, which calls the main method in tasks3/src/__init__.py
+you can copy your existing tasks2 code into tasks3 and then add tests, or you can start with new code for tasks3, whichever you prefer
+precisely what you test is up to you, and depends upon what you have implemented so far
+remember that you can access the book Python Testing with pytest, 2nd Edition for free via the DePaul library E-book collections and O'Reilly for Higher Education
+here are some example repositories to help you get something working (the README.md in each one documents how the repository was created):
+https://github.com/bcdroid/demo-pytest
+https://github.com/bcdroid/demo-stdin-stdout-pytest
+https://github.com/bcdroid/demo-typer
+https://github.com/bcdroid/demo-typer-pytest
+https://github.com/bcdroid/demo-chat
+https://github.com/bcdroid/demo-chat-completions
+
+uv : The term 'uv' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ uv init tasks3 --vcs none --package tasks3
++ ~~
+    + CategoryInfo          : ObjectNotFound: (uv:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+error: unexpected argument 'tasks3' found
+Usage: uv.exe init [OPTIONS] [PATH]
+For more information, try '--help'.
+
+Built tasks3 @ file:///C:/commandline/tasks3
+Installed 1 package in 52ms
+error: Failed to spawn: pytest
+  Caused by: program not found

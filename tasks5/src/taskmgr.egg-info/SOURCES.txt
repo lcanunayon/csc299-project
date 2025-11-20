@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/taskmgr.egg-info/PKG-INFO
+src/taskmgr.egg-info/SOURCES.txt
+src/taskmgr.egg-info/dependency_links.txt
+src/taskmgr.egg-info/entry_points.txt
+src/taskmgr.egg-info/top_level.txt
+tests/test_cli_integration.py

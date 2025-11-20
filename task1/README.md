@@ -1,6 +1,6 @@
 # Task Manager CLI
 
-A simple command-line task management application that stores tasks in a JSON file.
+A simple command-line task management application that stores tasks in a JSON file. Prompts are at the bottom of every README.
 
 ## Features
 
@@ -138,3 +138,10 @@ tasks1/
 - Task IDs are assigned sequentially starting from 1
 - The `tasks.json` file will be created in the same directory as `tasks.py`
 - If the JSON file becomes corrupted, the application will start with an empty task list
+
+-
+create a prototype command-line application that allows storing, listing, and searching tasks stored in a JSON data file
+put the code into files underneath a directory tasks1 in your csc299-project repository
+add a README.md file with instructions for running your code inside the tasks1 directory
+so your csc299-project repository should have a tasks1 directory, and Python file(s) plus a README.md file inside that tasks1 directory
+make sure that your commits are in your public GitHub repo (not just your local repository)

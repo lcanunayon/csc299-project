@@ -249,3 +249,8 @@ tasks1/
 - The JSON file stores all data and is human-readable
 - Priorities use emoji indicators for quick visual scanning
 - You can combine multiple filters when listing tasks
+
+-
+add a few commands like priorities, due dates, assignments, submodules
+
+error: unknown command "priority" and all the new commands
